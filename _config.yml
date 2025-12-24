@@ -1,0 +1,29 @@
+title: Harry Donegan
+description: A research student at KCL
+theme: jekyll-theme-minimal
+baseurl: ""
+url: "https://Donegan-Harry.github.io"
+
+# Navigation
+header_pages:
+  - index.md
+  - projects/index.md
+
+# Build settings
+markdown:  kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections for Julia projects
+collections:
+  projects: 
+    output: true
+    permalink:  /projects/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "projects"
