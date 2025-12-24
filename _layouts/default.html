@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/">Your Site Title</a></h1>
+    <!-- Add navigation here if needed -->
+  </header>
+  <main style="display: flex; gap: 2rem;">
+    {% if page.url contains '/projects/percolation/' %}
+      {% include percolation_sidebar.html %}
+    {% endif %}
+    <div class="content">
+      {{ content }}
+    </div>
+  </main>
+  <footer>
+    <hr>
+    <p>&copy; {{ site.time | date: "%Y" }} Your Name</p>
+  </footer>
+</body>
+</html>
