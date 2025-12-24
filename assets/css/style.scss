@@ -273,10 +273,22 @@ hr {
 
 /* Center images in percolation content */
 .percolation-content img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   max-width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Center and style image captions */
+.percolation-content p > em {
+  display: block;
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: #666;
+  font-size: 0.95em;
 }
 
 /* Responsive */
