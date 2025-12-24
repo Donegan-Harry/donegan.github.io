@@ -31,3 +31,11 @@ $$P_{\infty}=p(1-u^{z}),$$
 which is evidently vanishing when $p<p_{c}$ and $u=1$ is the stable solution. For general $z$ we will not be able to find a closed-form for $P_{\infty}$ and we will must rely on numerical solutions but if $z\leq5$ then the recurssion relation defines a polynomial equation which we can find closed forms for. We of course, as an example, elect to solve the simplest one for $z=3$ where $u=(1-p)+pu^2$ for which we obtain $u=1$ and $u=(1-p)/p$. The first holds for below the critical point $p<p_{c}=1/2$ with $P_{\infty}=0$ while above the critical point we have
 
 $$\frac{P_{\infty}}{p}=1-\frac{(1-p)^3}{p^3}.$$
+
+We may also be interested in the mean cluster size before the transition (it is obviously diverging for $p>p_{c}$). Let $T$ be the mean cluster size for one branch. If the branch is unnoccupied then $T=0$ while if it is occupied it contributes its own mass and the mass $T$ for its $z-1$ subbranches
+
+$$T = p(1+(z-1)T),$$
+
+with the solution $T=p/(1-(z-1)p)$ for $p<p_{c}$. If the origin is occupied then it will contribute its own mass and that of its $z$ branches leaving
+
+$$ S = 1 + 3T = \frac{(4-z)p+1}{(1-z)p+1}. $$
