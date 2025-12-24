@@ -15,3 +15,9 @@ An infinite cluster exists provided that $u<1$. Our criteria for finding the thr
 $$p_{c}=\frac{1}{z-1}.$$
 
 We mentioned before that one-dimension is trivial and the Bethe lattice contains it, namely the $z=2$ is a one-dimensional chain whose percolation threshold is at unity probability.
+
+With the recursion equation provided, in principle we are free to calculate the quantities of interest. The first of these is the order paramter $P_{\infty}$ which is known as the strength of the infinite cluster. A non-zero value indicates the presence of the infinite cluster and thus siginifies it is in the percolating phase. To define it, we note that $(p-P_{infty})$ is the probability the origin is occupied but not connected to any of its $z$ branches, this quantity is also equal to $pu^{z}$ and so we therefore have
+
+$$P_{\infty}=p(1-u^{z}),$$
+
+which is evidently vanishing when $p<p_{c}$ and $u=1$ is the stable solution.
