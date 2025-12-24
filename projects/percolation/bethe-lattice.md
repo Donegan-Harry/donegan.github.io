@@ -10,4 +10,4 @@ The first thing we will be interested in solving for is the critical point $p_{c
 
 $$u = (1-p) + pu^{z-1}.$$
 
-An infinite cluster exists provided that $u<1$. Our criteria for finding the threshold is then a matter of stability analysis of our non-linear recusion relation. In particular, if we let $f(u)=(1-p)+pu^{z-1}$ then we have $u=f(u)$ and we know at a fixed point $u_{0}$ our solution is stable provided that $|f'(u_{0})|<1$. Thus we consider $|f'(1)|=p(z-1)$ from which we find the critical point 
+An infinite cluster exists provided that $u<1$. Our criteria for finding the threshold is then a matter of stability analysis of our non-linear recusion relation. In particular, if we let $f(u)=(1-p)+pu^{z-1}$ then we have $u=f(u)$ and we know at a fixed point $u_{0}$ our solution is stable provided that $|\partial_{u}f(u_{0})|<1$. Thus we consider $|\partial_{u}f(1)|=p(z-1)$ from which we find the critical point 
