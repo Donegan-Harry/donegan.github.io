@@ -102,7 +102,7 @@ hr {
 .percolation-wrapper {
   display: flex;
   gap: 2.5rem;
-  max-width: 1400px;
+  max-width: calc(800px + 280px + 2.5rem); /* minima's default width + sidebar + gap */
   margin: 0 auto;
   padding: 30px 15px;
   align-items: flex-start;
@@ -120,6 +120,28 @@ hr {
   border-radius: 8px;
   padding: 25px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.percolation-content {
+  width: 800px; /* minima's default content width */
+  max-width: 800px;
+  flex-shrink: 0;
+}
+
+.percolation-content .post {
+  background: white;
+  border: 1px solid #e1e8ed;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.percolation-content .post-header {
+  margin-bottom: 2rem;
+}
+
+.percolation-content .post-title {
+  margin-bottom: 0;
 }
 
 .percolation-nav h3 {
