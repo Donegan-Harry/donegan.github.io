@@ -7,4 +7,4 @@ Despite the simplicity of the percolation model, it is notoriously difficult to 
 
 
 The first thing we will be interested in solving for is the critical point $p_{c}$ where the infinite cluster emerges. To solve this, we can consider the origin which we call our root. We are then free to choose a neighbour and we will define a branch as the part of the lattice rooted at the neighbour. We let $u$ be the probability that a branch fails, i.e. if it cannot be connected to infinity. Let us now consider the neighbour we we first choose, clearly if it is unoccupied with probability $1-p$ the branch fails at the first step. Now this site has $z-1$ child branches which emenate from on but since all these structures are statistically independent (the Bethe lattice is after all self-similar) the probability that one of these branches fail is also $u$. We therefore arrive at the recursion relation
-$$u = (1-p) + u^{z-1}.$$
+$$u = (1-p) + pu^{z-1}.$$
