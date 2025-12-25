@@ -17,3 +17,24 @@ To make the algorithm clear, we'll be a bit more precise in what we are talking 
 
 which produces the following chains 3->4->9 and 2->9 thus we have the set {2, 3, 4, 9}. Likewise we find that 5->6 and we have the set {5, 6} and the others are all sets of themselves. And the union operation? Well this is rather easy. Say we have two sets we want to combine with roots $p$ and $q$ we need only set $A[p]=q$ or vice-versa. So for example if we wanted the union of {2, 3, 4, 9} and {5, 6} to get {2, 3, 4, 5, 6, 9} we need only set A[6]->9.
 
+Before, we implement this code we can make one significant improvement to the find algorithm which is all to do with flattening the resulting chains that emerge (this is called path compression). For a large array, we can imagine a very large chain emerging which can be a pain to search through. The process is rather simple, with a another loop we traverse a chain until it reaches its root and replace the array values with the root, i.e. it points directly to the root. Althogether the code reads
+
+```julia
+    function findAdj(labels, x)
+        y = x 
+        while  labels[y] !=y 
+            y = labels[y]
+        end 
+        while labels[x] !=x 
+            z = labels[x]
+            labels[x] = y 
+            x = z 
+        end 
+        return y
+    end
+
+    function unionAdj(labels, x, y)
+        labels[findAdj(x)] = findAdj(y)
+    end
+```
+
