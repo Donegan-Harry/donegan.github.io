@@ -8,9 +8,12 @@ Getting percolation to work on a computer is actually rather simple. We need onl
 The find-union algroithm is all to do with disjointed sets and has two operations (its in the name!):
 - Find: Do two elements belong to the same set?
 - Union: Merge two sets toegther
-To make the algorithm clear, we'll be a bit more precise in what we are talking about. We have an array $A$ whose elements are integers between 0 and up N (the number of elements in the array). For our clusters this constraint is clearly going to hold. Now comes the find operation. Let us now define the root of the index $i$ as $A[A[A...[A[i]]...]]$ until $A[i]=i$. How does such an object help us? Well for that, let us consider an example
 
-| i    | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
-|------|---|---|---|---|---|---|---|---|---|---|
-| A[i] | 4 | 5 | 8 | 9 | 3 | 7 | 2 | 1 | 6 | 0 |
+To make the algorithm clear, we'll be a bit more precise in what we are talking about. We have an array $A$ whose elements are integers between 0 and up N (the number of elements in the array) and the elements will act as pointers so for example if $A[3]=4$ this means $A[3]$ and $A[4]$ are connected. For our clusters this constraint is clearly going to hold. Now comes the find operation. Let us now define the root of the index $i$ as $A[A[A...[A[i]]...]]$ until $A[i]=i$. How does such an object help us? Well for that, let us consider an example
+
+| i    | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+|------|---|---|---|---|---|---|---|---|---|
+| A[i] | 1 | 9 | 4 | 9 | 6 | 6 | 7 | 8 | 9 |
+
+which produces the following chains 3->4->9 and 2->9 thus we have the set {2, 3, 4, 9}. Likewise we find that 5->6 and we have the set {5, 6} and the others are all sets of themselves. 
 
