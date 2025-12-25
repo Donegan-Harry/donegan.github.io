@@ -15,5 +15,5 @@ To make the algorithm clear, we'll be a bit more precise in what we are talking 
 |------|---|---|---|---|---|---|---|---|---|
 | A[i] | 1 | 9 | 4 | 9 | 6 | 6 | 7 | 8 | 9 |
 
-which produces the following chains 3->4->9 and 2->9 thus we have the set {2, 3, 4, 9}. Likewise we find that 5->6 and we have the set {5, 6} and the others are all sets of themselves. And the union operation? Well this is rather easy. Say we have two sets we want to combine with roots $p$ and $q$ we need only set $p=q$ or vice-versa. So for example if we wanted the union of {2, 3, 4, 9} and {5, 6} to get {2, 3, 4, 5, 6, 9} we need only set A[6]->9.
+which produces the following chains 3->4->9 and 2->9 thus we have the set {2, 3, 4, 9}. Likewise we find that 5->6 and we have the set {5, 6} and the others are all sets of themselves. And the union operation? Well this is rather easy. Say we have two sets we want to combine with roots $p$ and $q$ we need only set $A[p]=q$ or vice-versa. So for example if we wanted the union of {2, 3, 4, 9} and {5, 6} to get {2, 3, 4, 5, 6, 9} we need only set A[6]->9.
 
