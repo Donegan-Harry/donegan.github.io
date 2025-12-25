@@ -47,7 +47,7 @@ function unionAdj(labels, x, y)
 end
 ```
 
-Now we have our functions, the Hoshen-Kopelman algorithm can be presented. Here, we have a 2D percolation array (we take our system to be 2D) and initialise a zero array of the same size.  For each occupied site in the interior of the grid, we check both the left and above neighbours. For boundary sites, we assume the 'would-be' neighbour is unoccupied. Four cases arise:
+Now we have our functions, the Hoshen-Kopelman algorithm can be presented. Here, we have a 2D percolation array (we take our system to be square 2D) and initialise a zero array of the same size.  For each occupied site in the interior of the grid, we check both the left and above neighbours. For boundary sites, we assume the 'would-be' neighbour is unoccupied. Four cases arise:
 - **Both neighbours empty**: Create a new label
 - **Only left occupied**: Inherit the root of the left label
 - **Only above occupied**: Inherit the root of the above label  
