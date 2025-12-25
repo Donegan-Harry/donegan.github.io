@@ -3,7 +3,14 @@ layout: percolation
 title: Hoshen–Kopelman Algorithm
 ---
 
-Getting percolation to work on a computer is actually rather simple. We need only initialise a zero array (in fact we only need a bit matrix) whose elements correspond to sites on the lattice and then use a random number generator to flip some of these elements to one. And just like that, we have a digital implementation of percolation. 
+Getting percolation to work on a computer is actually rather simple. We need only initialise a zero array (in fact we only need a bit matrix) whose elements correspond to sites on the lattice and then use a random number generator to flip some of these elements to one. And just like that, we have a digital implementation of percolation. A percolation problem on a square lattice can easily be generated via
+
+```julia
+function SquareLattice(L, p)
+    M = rand(L, L) .< p
+    return M
+end
+```
 
 However, we need to do some number crunching on these results, and since we are already using a computer, we might as well leverage its vastly superior computational abilities. The most important component of this digital framework is a cluster identification algorithm. Once we can label the sites into clusters, calculating all the quantities of interest becomes a rather trivial exercise. In principle, we can do this by brute force, but this problem falls squarely into the domain of computer science, and researchers have developed highly efficient algorithms. The method we present here is a particularly simple and elegant one due to Hoshen and Kopelman, based on the union–find algorithm.
 
