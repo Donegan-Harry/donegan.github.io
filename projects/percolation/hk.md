@@ -57,7 +57,7 @@ For each occupied site in the interior of the grid, we check both the left and a
 
 After completing the scan, we make a final pass through the label array, updating each label to point directly to its root using the find operation with path compression. This ensures all sites in the same cluster share the same label, giving us our final cluster identification. In Julia, this can be implemented as
 
-'''julia 
+```julia 
 function HK(M)
     largest_label = 0
     label = zeros(Int, n_rows, n_columns)
@@ -97,5 +97,5 @@ function HK(M)
     
     return label
 end
-'''
+```
 
