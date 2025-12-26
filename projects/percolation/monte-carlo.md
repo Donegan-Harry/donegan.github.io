@@ -4,12 +4,12 @@ title: Monte-Carlo Simulation
 ---
 
 ```julia
-function isPercolating(M)
+function isPercolating(HK_M)
     # Retrieve edges of system
-    top_edge = M[1, :]
-    bottom_edge = Set(M[end, :])
-    left_edge = Set(M[:, 1])
-    right_edge = M[:, end]
+    top_edge = HK_M[1, :]
+    bottom_edge = Set(HK_M[end, :])
+    left_edge = Set(HK_M[:, 1])
+    right_edge = HK_M[:, end]
 
     # Check if cluster spans system top to bottom
     vertical = findfirst(k -> k in bottom_edge, top_edge)
