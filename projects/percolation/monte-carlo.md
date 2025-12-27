@@ -57,7 +57,7 @@ end
 ```
 
 <p style="text-align: center; margin: 1.5rem 0;">
-  <img src="/assets/images/percolation/Percola.svg" alt="PercolationOrderParameter_Square" style="max-width: 600px;">
+  <img src="/assets/images/percolation/PercolationOrderParameter_Square.svg" alt="PercolationOrderParameter_Square" style="max-width: 600px;">
 </p>
 
 <p style="text-align: center; color: #666; font-size: 0.95em; font-style: italic; margin-top: 0.5rem;">
