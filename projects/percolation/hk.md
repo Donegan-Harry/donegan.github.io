@@ -65,6 +65,7 @@ After completing the scan, we make a final pass through the label array, updatin
 ```julia 
 function HK(M)
     largest_label = 0
+    n_columns, n_rows = size(M)
     label = zeros(Int, n_rows, n_columns)
     labels = collect(0:n_rows*n_columns)
     
